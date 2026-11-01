@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>~*~ HAPPY BIRTHDAY Lee ~*~</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 12px;
+    font-family: "Times New Roman", Times, serif;
+    color: #fff;
+    background-color: #000033;
+    background-image:
+      radial-gradient(1px 1px at 10px 20px, #fff 50%, transparent 51%),
+      radial-gradient(1px 1px at 60px 80px, #ff0 50%, transparent 51%),
+      radial-gradient(2px 2px at 110px 30px, #fff 50%, transparent 51%),
+      radial-gradient(1px 1px at 150px 120px, #0ff 50%, transparent 51%),
+      radial-gradient(1px 1px at 30px 140px, #f0f 50%, transparent 51%),
+      radial-gradient(2px 2px at 90px 150px, #fff 50%, transparent 51%);
+    background-size: 170px 170px;
+  }
+  .page { max-width: 760px; margin: 0 auto; }
+  .frame {
+    border: 6px ridge #c0c0c0;
+    background: #000080;
+    padding: 14px;
+  }
+  marquee { font-family: "Comic Sans MS", "Comic Sans", cursive; font-size: 22px; color: #ff0; background:#800080; padding:6px 0; border: 3px outset #ff00ff; }
+  h1 {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    text-align: center; font-size: clamp(28px, 7vw, 48px);
+    margin: 14px 0 4px;
+    color: #ff0; text-shadow: 3px 3px 0 #f0f, 6px 6px 0 #00f;
+  }
+  h2 { font-family: "Comic Sans MS", "Comic Sans", cursive; }
+  .sub { text-align:center; color:#0ff; font-family:"Courier New", monospace; margin:0 0 10px; }
+  .center { text-align: center; }
+  .small { font-size: 13px; }
+  .big { font-size: 22px; }
+  .red { color: #ff3333; }
+  .green { color: #00ff00; font-family:"Courier New", monospace; }
+  a { color: #0ff; } a:visited { color:#f0f; }
+
+  .blink { animation: blink 1s steps(1) infinite; }
+  @keyframes blink { 50% { visibility: hidden; } }
+
+  .rainbow-text {
+    background: linear-gradient(90deg,#f00,#f80,#ff0,#0f0,#0ff,#00f,#f0f,#f00);
+    background-size: 200% auto;
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    animation: rainbow 3s linear infinite;
+  }
+  @keyframes rainbow { to { background-position: 200% center; } }
+
+  hr.rainbow {
+    border: 0; height: 6px; margin: 18px 0;
+    background: linear-gradient(90deg,#f00,#f80,#ff0,#0f0,#0ff,#00f,#f0f);
+  }
+
+  .construction {
+    text-align:center; font-family: Arial, sans-serif; font-weight: bold; color:#000;
+    padding: 6px; margin: 10px 0;
+    background: repeating-linear-gradient(45deg,#ffcc00 0 14px,#000 14px 28px);
+  }
+  .construction span { background:#ffcc00; padding: 2px 8px; }
+
+  .poem {
+    background: #fffbe6; color: #3a1d00;
+    border: 4px double #b5651d;
+    padding: 16px 18px; line-height: 1.6;
+    font-family: Georgia, "Times New Roman", serif; font-size: 17px;
+    text-align: center;
+  }
+  .poem .sig { font-style: italic; margin-top: 10px; color:#8b0000; }
+
+  .riddle {
+    background:#000; color:#00ff00; border: 3px inset #808080;
+    font-family:"Courier New", monospace; font-size: 16px;
+    padding: 14px; line-height: 1.6; text-align:center;
+  }
+
+  /* Windows 95 window */
+  .window { background:#c0c0c0; color:#000; border: 3px outset #fff; margin: 12px 0; font-family: Tahoma, "MS Sans Serif", Arial, sans-serif; }
+  .titlebar { background: linear-gradient(90deg,#000080,#1084d0); color:#fff; font-weight:bold; padding:3px 6px; display:flex; justify-content:space-between; align-items:center; font-size:14px; }
+  .tb-btns b { display:inline-block; width:18px; height:16px; line-height:14px; text-align:center; background:#c0c0c0; color:#000; border:2px outset #fff; margin-left:2px; font-size:11px; }
+  .win-body { padding: 14px; }
+  .window input {
+    font-family:"Courier New", monospace; font-size: 18px;
+    padding: 6px 8px; width: 100%; max-width: 320px;
+    border: 3px inset #808080; background:#fff;
+  }
+  .window button {
+    font-family: Tahoma, Arial, sans-serif; font-size: 16px; font-weight:bold;
+    padding: 6px 16px; margin-top: 8px; cursor:pointer;
+    background:#c0c0c0; border: 3px outset #fff;
+  }
+  .window button:active { border-style: inset; }
+  .msg { min-height: 1.4em; font-family:"Courier New", monospace; font-weight:bold; margin: 10px 0 0; }
+  .msg.err { color:#c00000; } .msg.ok { color:#008000; }
+  .shake { animation: shake .4s; }
+  @keyframes shake { 25%{transform:translateX(-8px)} 50%{transform:translateX(8px)} 75%{transform:translateX(-4px)} }
+
+  .cake { color:#c00000; font-size: 13px; text-align:left; display:inline-block; margin: 6px auto; }
+  .passcode {
+    display:inline-block; margin: 8px 0 14px; padding: 12px 18px;
+    background:#000; color:#ff0; border: 4px ridge #ff00ff;
+    font-family:"Courier New", monospace; font-size: 22px; font-weight:bold;
+  }
+
+  .footer { text-align:center; font-size:12px; color:#c0c0c0; margin-top: 16px; font-family: Arial, sans-serif; }
+  .counter { display:inline-block; background:#000; color:#0f0; font-family:"Courier New", monospace; border:2px inset #808080; padding:2px 6px; letter-spacing:3px; }
+  .badges span { display:inline-block; border:1px solid #fff; padding:2px 6px; margin:3px; font-size:11px; background:#333; }
+</style>
+</head>
+<body>
+<div class="page">
+  <marquee scrollamount="7">*** HAPPY BIRTHDAY Lee *** GROOVY SINCE THE 70s *** NEW ALERT: SOMEBODY IS GETTING OLDER *** &#127881; &#127874; &#127880; ***</marquee>
+
+  <div class="frame">
+    <h1>&#127880; HAPPY BIRTHDAY! &#127880;</h1>
+    <p class="sub">&gt; Welcome to Lee's Home Page on the World Wide Web_</p>
+
+    <div class="construction"><span>&#128679; BIRTHDAY UNDER CONSTRUCTION &#128679;</span></div>
+
+    <div id="stage">
+      <!-- ===== PAGE 1 ===== -->
+      <div class="poem">
+        Roses are red, our dashboards are too,<br>
+        But today the only alert is all about <b>you</b>!<br><br>
+
+        Born in the seventies, groovy and bright,<br>
+        When disco was king and the bell-bottoms tight.<br>
+        Before there were firewalls, before there was Wi-Fi,<br>
+        You were spinning cassettes and aiming up high.<br><br>
+
+        We've triaged the logs and we've checked every source &ndash;<br>
+        No false positive here, you're a legend, of course!<br>
+        No phishing, no malware, no brute-force attack,<br>
+        Just a birthday incident &ndash; and we've got your back.<br><br>
+
+        Severity: <b>HIGH</b>, and the verdict is clear:<br>
+        You're the MVP of our team every year!<br>
+        There's a present out there, as sweet as a cake...<br>
+        But first, dear analyst, a quest you must take!
+        <div class="sig">~ with love, the SOC team, KPMG Sofia ~</div>
+      </div>
+
+      <hr class="rainbow">
+
+      <div class="window">
+        <div class="titlebar"><span>&#128273; Enter Password #1</span><span class="tb-btns"><b>_</b><b>&#9633;</b><b>x</b></span></div>
+        <div class="win-body center">
+          <form data-stage="2">
+            <input type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="type the password...">
+            <button type="submit">ENTER &gt;&gt;</button>
+          </form>
+          <p class="msg"></p>
+        </div>
+      </div>
+
+      <h2 class="rainbow-text center">&#10024; RIDDLE #1 &#10024;</h2>
+      <div class="riddle">
+        I'm the place we escape when the tickets run low,<br>
+        Where the coffee is hot and the stories can flow.<br>
+        On my wall hangs a board full of colours and squares &ndash;<br>
+        Little notes stuck with wishes, with jokes and with cares.<br>
+        So look closely, detective, read high and read low:<br>
+        One note holds the password you need to know.
+      </div>
+    </div>
+
+    <hr class="rainbow">
+    <div class="footer">
+      You are visitor number <span class="counter">000070</span><br><br>
+      <div class="badges">
+        <span>Best viewed in Netscape Navigator 4.0</span>
+        <span>800 x 600</span>
+        <span>Made with Notepad</span>
+        <span>SOC Webring &laquo; prev | next &raquo;</span>
+      </div>
+      <br>&copy; 1970-something &bull; SOC Team, KPMG Sofia
+    </div>
+  </div>
+</div>
+
+<script>
+/* Encrypted pages - unlocked only with the correct password */
+const PAYLOADS = { 2: "51d82331af6484e7.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", 3: "f970940518479949.uRo1a2nE59KeDg04fa6t5lgYjQChvE6VNlQPtnjX9lLUFL8/3rVpN8/GFF88ht4+pDr2fRPgzp/kqQuZSozmWFqCIJDAqC+vkwO2BeZ7WLq1UDZvbj85fjPLeT47zAR9bFUHZktOJxd7kW9zflfv4poo/dzLuw516PGhGqPiMs+1jqKSSYcXSN9EUrgNVhGbZEqA79eLp205oziwDNJzI9dQBvGfW6WBz5pXsBXWSkmTFfGnVQdT1fBTNpCbcnQmdsGQ21GBso0mf7AxlTYiTk8JWBdyZtEiHpzo/aTju56wIp2LVWkgXe949QZ8GyUBh/+/WTvkn0wagU47c2fUUe+9evxZ6+Mh3AjhH/8+QFu+voxKgrJrJHabAMkCq22bFT9x3Y/3YiCR2LgX0wr32RUa7f5kN6MyRm/SgS6K+yAmHSHfo9g2rju8c1rKde8y+fFCPo2/EIekWXsNwIWnEXbLjQihjGeZ4GlUL6ZINbawQXwqUXr5X50iNrA3P+gCv07HOXVvkHmFBJAvK4Ckd+DYAOhNq7LxqM6RgoNAZovebJQ9qKDknF5eGGSHneMAtX3ZCqxW6tBeIcaaXGJrZhxwAUFzZsORXTC2gtpp4FNTJjjrGa3aLehSkqNQnoonHpZ7NpG2VzZtc0Rja3ArErTbeEg2vYyXlSq+CYSgDb3zsIzdh67OoZIsz7HO+qNCwQXJ2XCL5aNQYiEE2eWcveajZ16P4YaKkmsZzt57R9A1rISpGO2AcgdQtsEkWyLs5xKMPiqzAhtZgWdHK5VWLMLprjpTIF1hKbkirpWPOk56xR5Mz/rs67q5SI6T+q+kPXpHRMJeuIJDUnGgW6W3uWSE+9CABZqnvTv7EPuT0lnV708KagdhEmZ72NVPGxHzs5beZNC6QaP1aDqQoS9atFh7ASsszGKQLk8KrRISrsCeGIl1fhRjFEcXGwFSyN6d31tf0VEqlpsFQ9oNgPzNGk0dPceixifFrzSfq4WxTvWm7DRizxSToJp5DHQU19O0mMAapmaes4F/43s1IRqF9rZZSmXs3VhxchKADvgIGECVv/Jq+f/tVoOMs0PZx3MNI6Gxiy4Ns/KO/LVu4rx9EjLqI2DDkZRF+gJQ5P90Yy+hwoe+Dwsh2PG2ZBcjTS7Aqh2cJwdg9ebCX+fTuadEfpj4K69wqFbzwzd53kP3vbNdw6qLZQF/zTR3nuDU50VUO55mcYa0XtnIZGi2w4LudTQgaJPe4CuxsjyPbeCD9WteiUavjGW5Ev4f" };
+
+const WRONG = [
+  "ACCESS DENIED. Incident logged with the SOC. &#128680;",
+  "Error 404: Password not found.",
+  "Nope! Even Clippy knows that's wrong. &#128206;",
+  "Brute force detected... account NOT locked, try again &#128521;",
+  "Wrong password. Have you tried turning it off and on again?"
+];
+
+/* --- tiny SHA-256 (works offline, no HTTPS needed) --- */
+function sha256(bytes) {
+  const K = [], H = [];
+  let n = 2, c = 0;
+  while (c < 64) {
+    let prime = true;
+    for (let i = 2; i * i <= n; i++) if (n % i === 0) { prime = false; break; }
+    if (prime) {
+      if (c < 8) H[c] = (Math.pow(n, 1/2) * 4294967296) | 0;
+      K[c++] = (Math.pow(n, 1/3) * 4294967296) | 0;
+    }
+    n++;
+  }
+  const len = bytes.length;
+  const total = ((len + 9 + 63) >> 6) << 6;
+  const buf = new Uint8Array(total);
+  buf.set(bytes); buf[len] = 0x80;
+  const dv = new DataView(buf.buffer);
+  dv.setUint32(total - 4, (len * 8) >>> 0);
+  dv.setUint32(total - 8, Math.floor(len * 8 / 4294967296));
+  const W = new Int32Array(64);
+  const r = (x, k) => (x >>> k) | (x << (32 - k));
+  for (let o = 0; o < total; o += 64) {
+    for (let t = 0; t < 16; t++) W[t] = dv.getInt32(o + t * 4);
+    for (let t = 16; t < 64; t++) {
+      const a = W[t-15], b = W[t-2];
+      W[t] = (W[t-16] + (r(a,7) ^ r(a,18) ^ (a >>> 3)) + W[t-7] + (r(b,17) ^ r(b,19) ^ (b >>> 10))) | 0;
+    }
+    let [a,b,c2,d,e,f,g,h] = H;
+    for (let t = 0; t < 64; t++) {
+      const t1 = (h + (r(e,6) ^ r(e,11) ^ r(e,25)) + ((e & f) ^ (~e & g)) + K[t] + W[t]) | 0;
+      const t2 = ((r(a,2) ^ r(a,13) ^ r(a,22)) + ((a & b) ^ (a & c2) ^ (b & c2))) | 0;
+      h = g; g = f; f = e; e = (d + t1) | 0; d = c2; c2 = b; b = a; a = (t1 + t2) | 0;
+    }
+    H[0]=(H[0]+a)|0; H[1]=(H[1]+b)|0; H[2]=(H[2]+c2)|0; H[3]=(H[3]+d)|0;
+    H[4]=(H[4]+e)|0; H[5]=(H[5]+f)|0; H[6]=(H[6]+g)|0; H[7]=(H[7]+h)|0;
+  }
+  const out = new Uint8Array(32), odv = new DataView(out.buffer);
+  H.forEach((v, i) => odv.setInt32(i * 4, v));
+  return out;
+}
+
+const norm = s => s.trim().toLowerCase().split(/\s+/).join(" ");
+const enc = new TextEncoder();
+
+function decrypt(payload, password) {
+  const [salt, b64] = payload.split(".");
+  const data = Uint8Array.from(atob(b64), ch => ch.charCodeAt(0));
+  const key = norm(password);
+  const out = new Uint8Array(data.length);
+  for (let i = 0; i < data.length; i += 32) {
+    const block = sha256(enc.encode(key + ":" + salt + ":" + (i / 32)));
+    for (let j = 0; j < 32 && i + j < data.length; j++) out[i + j] = data[i + j] ^ block[j];
+  }
+  try {
+    const text = new TextDecoder("utf-8", { fatal: true }).decode(out);
+    return text.startsWith("OK::") ? text.slice(4) : null;
+  } catch (e) { return null; }
+}
+
+function show(html) {
+  const stage = document.getElementById("stage");
+  stage.innerHTML = html;
+  window.scrollTo({ top: 0, behavior: "smooth" });
+  bindForms();
+}
+
+function bindForms() {
+  document.querySelectorAll("form[data-stage]").forEach(form => {
+    form.addEventListener("submit", ev => {
+      ev.preventDefault();
+      const next = form.dataset.stage;
+      const input = form.querySelector("input");
+      const msg = form.parentElement.querySelector(".msg");
+      const html = decrypt(PAYLOADS[next], input.value);
+      if (html) {
+        localStorage.setItem("bdayquest_" + next, input.value);
+        msg.className = "msg ok";
+        msg.innerHTML = "ACCESS GRANTED... loading &#9608;&#9608;&#9608;&#9608;&#9608;";
+        setTimeout(() => show(html), 900);
+      } else {
+        msg.className = "msg err";
+        msg.innerHTML = WRONG[Math.floor(Math.random() * WRONG.length)];
+        const win = form.closest(".window");
+        win.classList.remove("shake"); void win.offsetWidth; win.classList.add("shake");
+        input.select();
+      }
+    });
+  });
+}
+
+/* Remember progress if the page is refreshed */
+(function resume() {
+  for (const s of ["3", "2"]) {
+    const pw = localStorage.getItem("bdayquest_" + s);
+    const html = pw && decrypt(PAYLOADS[s], pw);
+    if (html) { show(html); return; }
+  }
+  bindForms();
+})();
+</script>
+</body>
+</html>
